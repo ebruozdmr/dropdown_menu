@@ -1,0 +1,124 @@
+:root{
+    --primary-color:steelblue;
+    --secondary-color:#ddd;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background:#ddd;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+}
+
+#navbar ul{
+    list-style: none;
+}
+
+#navbar ul li{
+    color:#333;
+    display:inline-block;
+    padding:1rem;
+    position: relative;
+}
+
+#navbar ul li a {
+    text-decoration:none;
+    color:#333;
+}
+
+/* Hide nested ul by default */
+#navbar ul li ul{
+    display: none;
+}
+
+#navbar ul li:hover{/* Textler beyaz oldu. */
+     cursor: pointer;
+     background:var(--primary-color);
+     color:#fff;
+}
+
+#navbar ul li:hover a{/* Linkler beyaz oldu. */
+    color:#fff;
+}
+
+/* Nested Dropdown Show */
+#navbar ul li:hover ul{
+    display:block;
+    position:absolute;
+    left:0;
+    width:250px;
+    height:150px;
+    margin-top:1rem;
+}
+
+
+#navbar ul li:hover ul li {
+    display: block;
+    background:#e7e7e7;
+
+}
+
+#navbar ul li:hover ul li a{
+     color:#333;
+}
+
+#navbar ul li:hover ul li:hover{
+     background:#e0e0e0;
+     color:inherit;
+}
+
+#navbar ul li:hover ul li span{
+     float: right;
+     color: #fff;
+     padding: 0.2rem 0.5rem;
+     font-size: 1rem;
+     border-radius:5px;
+     background:var(--primary-color);
+}
+
+#navbar ul li:hover ul li span:hover{
+     background:orange;
+}
+
+#showcase{
+    background:var(--primary-color);
+    color:#fff;
+    text-align: center;
+    padding: 0 2rem;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+}
+
+#showcase h1{
+    font-size:4.5rem;
+}
+
+@media(max-width:600px)
+{
+   #navbar ul li{
+       display: block;
+   } 
+
+   #navbar ul li:hover ul{
+        height: 50%;
+        width: 100%;
+        position:relative;
+   }
+}
+
+
+
+
+
+
+
+
